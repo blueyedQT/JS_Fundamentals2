@@ -34,11 +34,26 @@
 				} else if (random > 2) {
 					return person.crawl();
 				};
+			},
+			fly: function(x, y) {
+				var random = Math.floor(Math.random()*10)+1;
+				if(random > 7) {
+					console.log('Flying!!!'),
+					x();
+				} else {
+					console.log('Falied to Fly...'),
+					y();
+				}
 			}
 
 		}
-		console.log(person.doSomething());
-		console.log(person.distance_travelled);
+		var x = function() {
+			alert('eating ice cream!');
+		}
+		var y = function() {
+			alert('crying at home...');
+		}
+		person.fly(x, y);
 	</script>
 </body>
 </html>
